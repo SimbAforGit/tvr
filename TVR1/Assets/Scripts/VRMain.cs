@@ -6,6 +6,7 @@ public class VRMain : MonoBehaviour
 	// Which types of tracking this instance will use.
 	public bool trackRotation = true;
 	public bool trackPosition = false;
+
 	public bool VRModeEnabled {
 		get {
 			return vrModeEnabled;
@@ -18,29 +19,28 @@ public class VRMain : MonoBehaviour
 	[SerializeField]
 	private bool vrModeEnabled = true;
 
-	public Config.GlassesTypes GlassesType
-	{
-		get{
+	public Config.GlassesTypes GlassesType {
+		get {
 			return glassesType;
 		}
-		set{
+		set {
 			glassesType = value;
 		}
 	}
+
 	[SerializeField]
 	private Config.GlassesTypes glassesType = Config.GlassesTypes.MojingIII;
 
+	void Update(){
+		UpdateHead ();
+	}
 
-
-	public Config.GUITypes GUIType
-	{
-		get{ 
-			return guiType;
+	private void UpdateHead(){
+		if (trackPosition) {
+			
 		}
-		set{
-			guiType = value;
+		if (trackRotation) {
+			transform.rotation = SensorState.Head_Quaternion;
 		}
 	}
-	[SerializeField]
-	private Config.GUITypes guiType = Config.GUITypes.Gaze;
 }

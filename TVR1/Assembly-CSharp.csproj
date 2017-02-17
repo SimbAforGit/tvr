@@ -46,15 +46,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Config.cs" />
-     <Compile Include="Assets\Scripts\ControllerInputModule.cs" />
-     <Compile Include="Assets\Scripts\ControllerState.cs" />
-     <Compile Include="Assets\Scripts\GUICamera.cs" />
-     <Compile Include="Assets\Scripts\GazeInputModule.cs" />
+     <Compile Include="Assets\Scripts\GUIInputModule.cs" />
      <Compile Include="Assets\Scripts\InitializeOnLoad.cs" />
      <Compile Include="Assets\Scripts\Pose3D.cs" />
+     <Compile Include="Assets\Scripts\SensorProvider.cs" />
+     <Compile Include="Assets\Scripts\SensorState.cs" />
      <Compile Include="Assets\Scripts\VREye.cs" />
      <Compile Include="Assets\Scripts\VRHead.cs" />
      <Compile Include="Assets\Scripts\VRMain.cs" />
+     <None Include="Assets\Shaders\GvrUnlitTransparentOverlayColor.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity5.4/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
